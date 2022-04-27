@@ -8,6 +8,25 @@
 import SwiftUI
 import CoreData
 
+class NotificationManager {
+    
+    static let instance = NotificationManager()
+    
+    func scheduleNotification() {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Don't forget!"
+        content.subtitle = "Have you note your calories intake?"
+        content.sound = .default
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
+}
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<Food>
@@ -18,7 +37,9 @@ struct ContentView: View {
         NavigationView {
             VStack(alignment: .leading) {
                 Text("\(Int(totalCaloriesToday())) Kcal (Today)")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.blue)
+                    .fontWeight(.bold)
+                    .font(.system(size: 22))
                     .padding(.horizontal)
                 
                 List {
@@ -53,7 +74,10 @@ struct ContentView: View {
                 }
                 
                 ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
+                    Button("Notification") {
+//                        NotificationManager.instance.requestAuthorization()
+                        NotificationManager.instance.scheduleNotification()
+                    }
                 }
             }
             .sheet(isPresented: $showingAddView) {
