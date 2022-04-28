@@ -63,7 +63,7 @@ struct ContentView: View {
                 }
                 .listStyle(.plain)
             }
-            .navigationTitle("Calories Tracker")
+            .navigationTitle("🍔 Calories Tracker")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -75,7 +75,6 @@ struct ContentView: View {
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Notification") {
-//                        NotificationManager.instance.requestAuthorization()
                         NotificationManager.instance.scheduleNotification()
                     }
                 }
@@ -109,5 +108,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

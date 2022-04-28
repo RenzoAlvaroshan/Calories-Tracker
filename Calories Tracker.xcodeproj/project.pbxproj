@@ -16,6 +16,7 @@
 		837F5C882818A8C10082C820 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F5C872818A8C10082C820 /* AddFoodView.swift */; };
 		837F5C8A2818AA100082C820 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F5C892818AA100082C820 /* TimeFormatting.swift */; };
 		837F5C8C2818B07F0082C820 /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F5C8B2818B07F0082C820 /* EditFoodView.swift */; };
+		837F5CDD281A559F0082C820 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837F5CDC281A559F0082C820 /* HelpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		837F5C892818AA100082C820 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		837F5C8B2818B07F0082C820 /* EditFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
 		837F5CB12818D2DD0082C820 /* Calories-Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Calories-Tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
+		837F5CDC281A559F0082C820 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				837F5C712818A5C80082C820 /* ContentView.swift */,
 				837F5C872818A8C10082C820 /* AddFoodView.swift */,
 				837F5C8B2818B07F0082C820 /* EditFoodView.swift */,
+				837F5CDC281A559F0082C820 /* HelpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				837F5C842818A73A0082C820 /* DataController.swift in Sources */,
 				837F5C702818A5C80082C820 /* Calories_TrackerApp.swift in Sources */,
 				837F5C802818A6AF0082C820 /* FoodModel.xcdatamodeld in Sources */,
+				837F5CDD281A559F0082C820 /* HelpView.swift in Sources */,
 				837F5C8C2818B07F0082C820 /* EditFoodView.swift in Sources */,
 				837F5C8A2818AA100082C820 /* TimeFormatting.swift in Sources */,
 			);

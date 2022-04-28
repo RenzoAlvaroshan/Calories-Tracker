@@ -13,8 +13,19 @@ struct Calories_TrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
+            TabView {
+                ContentView()
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
+                    .tabItem {
+                        Label("Home", systemImage: "heart.fill")
+                    }
+                
+                HelpView()
+                    .tabItem {
+                        Label("Help", systemImage: "questionmark.circle.fill")
+                    }
+            }
+            
         }
     }
 }
